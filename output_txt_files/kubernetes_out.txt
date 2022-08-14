@@ -1,0 +1,51 @@
+voclabs:~/environment/project_four/project-ml-microservice-kubernetes (master) $ kubectl config view
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority: /home/ec2-user/.minikube/ca.crt
+    extensions:
+    - extension:
+        last-update: Sun, 07 Aug 2022 14:46:53 UTC
+        provider: minikube.sigs.k8s.io
+        version: v1.26.1
+      name: cluster_info
+    server: https://192.168.49.2:8443
+  name: minikube
+contexts:
+- context:
+    cluster: minikube
+    extensions:
+    - extension:
+        last-update: Sun, 14 Aug 2022 14:46:53 UTC
+        provider: minikube.sigs.k8s.io
+        version: v1.26.1
+      name: context_info
+    namespace: default
+    user: minikube
+  name: minikube
+current-context: minikube
+kind: Config
+preferences: {}
+users:
+- name: minikube
+  user:
+    client-certificate: /home/ec2-user/.minikube/profiles/minikube/client.crt
+    client-key: /home/ec2-user/.minikube/profiles/minikube/client.key
+voclabs:~/environment/project_four/project-ml-microservice-kubernetes (master) $ ./run_kubernetes.sh 
+pod/ml created
+NAME   READY   STATUS              RESTARTS   AGE
+ml     0/1     ContainerCreating   0          0s
+error: unable to forward port because pod is not running. Current status=Pending
+voclabs:~/environment/project_four/project-ml-microservice-kubernetes (master) $ ./run_kubernetes.sh 
+Error from server (AlreadyExists): pods "ml" already exists
+NAME   READY   STATUS    RESTARTS   AGE
+ml     1/1     Running   0          109s
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
