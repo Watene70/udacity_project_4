@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://github.com/Watene70/udacity_project_4)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/Watene70/udacity_project_4/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/Watene70/udacity_project_4/tree/main)
 
 ## Project Overview
 
